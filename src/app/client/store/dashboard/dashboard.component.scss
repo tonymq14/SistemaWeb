@@ -1,5 +1,5 @@
 //importaciones
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap");//letras
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;900&display=swap"); //letras
 @import "../../../../constvalue";
 @import "../../../../mixins";
 @import "../../../../variables";
@@ -38,12 +38,24 @@ header {
   margin-left: 20px;
   transition: all 0.3s;
 }
-
 .logo:hover {
   cursor: pointer;
   filter: brightness(0) saturate(100%) invert(0%) sepia(100%) saturate(0%)
     hue-rotate(28deg) brightness(95%) contrast(105%);
   transform: scale(1.1);
+}
+
+.header_avatar {
+  width: 55px;
+  margin-right: 20px;
+  @media screen and(max-width:768px) {
+    display: none;
+  }
+  &:hover {
+    cursor: pointer;
+    border: 2px solid orange;
+    border-radius: 50%;
+  }
 }
 //btn-bar
 .bar-btn {
@@ -81,6 +93,8 @@ header {
   & a.active,
   a:hover {
     color: rgb(233, 222, 230);
+    text-decoration: underline;
+    text-underline-offset: 0.5em;
   }
 }
 //bar-manu
