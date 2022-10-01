@@ -15,8 +15,5 @@ export class LoadJsService {
       let addTag=document.getElementsByTagName(`${tagName}`)[0];
       addTag.appendChild(script);
     }
-
   }
-
-  
 }
