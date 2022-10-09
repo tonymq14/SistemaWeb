@@ -4,7 +4,8 @@
 
 export const environment = {
   production: true,
-  uri_back_end: "https://localhost:7160/api"
+  //uri_back_end: "https://localhost:7160/api"
+  uri_back_end: 'http://novedadeslyb01-001-site1.atempurl.com/api',
 };
 
 /*

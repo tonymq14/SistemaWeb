@@ -8,10 +8,9 @@ import { UserResponse } from '../dto/user.dto';
   providedIn: 'root'
 })
 export class AuthService {
-
-
-
-  constructor(private http:HttpClient) { }
+  constructor(
+    private http: HttpClient) {
+    }
 
   login(email:string,password:string):Observable<UserResponse>{
     const body={user:email,password};

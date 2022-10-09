@@ -69,6 +69,19 @@ header {
     color: $rosado-color;
   }
 }
+.user {
+  display: flex;
+  margin: 10px;
+}
+.btn_salir {
+  margin-right: 10px;
+  margin-top: 10px;
+  display: block;
+  border-radius: 10px;
+  width: 66px;
+  height: 30px;
+  background-color: #30d6d6bd;
+}
 //menu-resposive
 .nav-menu {
   position: fixed;
@@ -203,9 +216,8 @@ nav {
 }
 //Fin nav
 
-
 //container productos-filter
-.container-producto{
+.container_producto {
   padding: 0 5rem;
   display: flex;
   align-items: stretch;
@@ -213,21 +225,81 @@ nav {
   width: 100%;
 
   //filter
-  .sidebar_filters{
+  .sidebar_filters {
     padding: 1.6rem;
     width: 20rem;
-    .filter_container{
-
-      .filter_list{
-
-        .item_filter{
-
+    .filter_container {
+      border-bottom: 1px solid #e9e8ea;
+      border-top: 1px solid #e9e8ea;
+      height: auto;
+      width: 100%;
+      .filter_list {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        width: 100%;
+        .item_filter {
+          border-bottom: 1px solid #e9e8ea;
+          .title-item {
+            align-items: center;
+            cursor: pointer;
+            display: flex;
+            height: auto;
+            justify-content: space-between;
+            padding: 10px;
+            width: 100%;
+            .icons {
+              box-sizing: border-box;
+            }
+          }
+          .contenido_filtro {
+            cursor: pointer;
+            display: block;
+            height: auto;
+            opacity: 1;
+            padding: 0.9375rem 0.5rem;
+            .list_unstyled {
+              list-style: none;
+              padding-left: 0;
+              .content_Check {
+                border-radius: 2px;
+                color: #959595;
+                display: block;
+                font-size: 0.9375rem;
+                padding-left: 1.875rem;
+                position: relative;
+                user-select: none;
+              }
+              .content_Check input {
+                cursor: pointer;
+                height: 0;
+                opacity: 0;
+                position: absolute;
+                width: 0;
+              }
+              .check_Mark {
+                background-color: #ffffff;
+                border: 1px solid #131314;
+                border-radius: 2px;
+                height: 15px;
+                left: 0;
+                position: absolute;
+                top: 0.25rem;
+                width: 15px;
+              }
+            }
+          }
         }
       }
     }
+
+    .icons {
+      box-sizing: border-box;
+    }
   }
+
   //productos
-  .productos{
+  .productos {
     display: none;
   }
 }

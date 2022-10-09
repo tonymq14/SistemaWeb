@@ -6,7 +6,6 @@ import { User, UserResponse } from '../dto/user.dto';
   providedIn: 'root'
 })
 export class UserService {
-
   user?:User;
   userSubject:BehaviorSubject<User | undefined>=new BehaviorSubject<User | undefined>(undefined); 
 
@@ -16,17 +15,15 @@ export class UserService {
         const X: UserResponse=JSON.parse(userRes);
         // validaR  si el toke es validado
         // si no es valido: borralo
-
         this.user=X.user;
         this.userSubject.next(this.user);
-
     }
   }
 
   getUser():Observable<User|undefined>{
     return this.userSubject.asObservable();
   }
-
+  
   setUser(data?:User){
     this.user=data;
     this.userSubject.next(this.user);
