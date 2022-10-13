@@ -23,45 +23,64 @@
         <li><a href="">Mis compras</a></li>
       </ul>
 
-      <div  class="user" *ngIf="user">
-      <img class="header_avatar" src="../../../../assets/img/image-avatar.png" alt="" />
-        {{user.nombreApellido}}
-        <br>
+      <div class="user" *ngIf="user">
+        <img
+          class="header_avatar"
+          src="../../../../assets/img/image-avatar.png"
+          alt=""
+        />
+        {{ user.nombreApellido }}
+        <br />
         <button class="btn_salir" (click)="logout()">Salir</button>
       </div>
 
-      <div  *ngIf="!user">
-      </div>
+      <div *ngIf="!user"></div>
 
       <!--Menu-->
-
     </div>
     <!--Final Menu-Header-->
   </header>
-
+  <!--Final Header-->
   <!-- Inicio img-Carrusel-->
   <nav class="nav__slider">
     <div class="container-slider">
       <div class="slider" id="slider">
         <div class="slider_section">
-          <img src="../../../../assets/img/CarteraOferta1.jpg" alt="" class="slider_img" />
+          <img
+            src="../../../../assets/img/CarteraOferta1.jpg"
+            alt=""
+            class="slider_img"
+          />
         </div>
         <div class="slider_section">
-          <img src="../../../../assets/img/CarteraOferta2.jpg" alt="" class="slider_img" />
+          <img
+            src="../../../../assets/img/CarteraOferta2.jpg"
+            alt=""
+            class="slider_img"
+          />
         </div>
         <div class="slider_section">
-          <img src="../../../../assets/img/CarteraOferta3.jpg" alt="" class="slider_img" />
+          <img
+            src="../../../../assets/img/CarteraOferta3.jpg"
+            alt=""
+            class="slider_img"
+          />
         </div>
         <div class="slider_section">
-          <img src="../../../../assets/img/logotienda.png" alt="" class="slider_img" />
+          <img
+            src="../../../../assets/img/logotienda.png"
+            alt=""
+            class="slider_img"
+          />
         </div>
       </div>
       <div class="slider_btn slider_btn--righ" id="btn-rigth">&#62;</div>
       <div class="slider_btn slider_btn--left" id="btn-left">&#60;</div>
     </div>
   </nav>
+  <!-- Fin img-Carrusel-->
 
-<!-- Inicio filtro Producto-->
+  <!-- Inicio filtro Producto-->
   <div class="container_producto">
     <div class="sidebar_filters active">
       <div class="filter_container">
@@ -69,29 +88,46 @@
           <li class="item_filter">
             <div class="title-item">
               <p>Categoria</p>
-              <i class="icons">➕</i>
+              <i class="icons">➕ </i>
             </div>
             <div class="contenido_filtro">
               <ul class="list_unstyled">
                 <li>
                   <label class="content_Check">
                     Billeteras
-                    <input class="check_element" type="checkbox" data-filter="categoria"
-                      data-value="Billeteras" data-type="checkbox" />
+                    <input
+                      class="check_element"
+                      type="checkbox"
+                      data-filter="categoria"
+                      data-value="Billeteras"
+                      data-type="checkbox"
+                    />
                     <span class="check_Mark"></span>
                   </label>
                 </li>
                 <li>
                   <label class="content_Check">
                     Carteras
-                    <input class="check_element" type="checkbox" data-filter="categoria" data-value="Billeteras" data-type="checkbox" />
+                    <input
+                      class="check_element"
+                      type="checkbox"
+                      data-filter="categoria"
+                      data-value="Billeteras"
+                      data-type="checkbox"
+                    />
                     <span class="check_Mark"></span>
                   </label>
                 </li>
                 <li>
                   <label class="content_Check">
                     Mochilas
-                    <input class="check_element" type="checkbox" data-filter="categoria" data-value="Billeteras" data-type="checkbox" />
+                    <input
+                      class="check_element"
+                      type="checkbox"
+                      data-filter="categoria"
+                      data-value="Billeteras"
+                      data-type="checkbox"
+                    />
                     <span class="check_Mark"></span>
                   </label>
                 </li>
@@ -101,87 +137,89 @@
         </ul>
       </div>
     </div>
-    <div class="productos">
-      <div class="card_item carousel_item card_mrc_2163">
-        <div class="label_new_hearth_container">
-          <i class="icons-renzo-costa icons-renzo-costa-hearth btn_add_favorite" data-sku-id="2986"></i>
-        </div>
-        <a class="link" href="https://www.renzocosta.com/morral-mrc-2163-dark-brown/p"><img class="card-img-top"
-            src="https://renzocosta.vteximg.com.br/arquivos/ids/170415/MORRAL_MRC-2163_DARK-BROWN_0.jpg?v=637731885174270000"
-            alt="" /></a>
-        <div class="card-body">
-          <ul class="list_color_container">
-            <li class="list_color_element" data-color="marron" data-favorite="0"
-              data-link="https://www.renzocosta.com/morral-mrc-2163-dark-brown/p"
-              data-img="https://renzocosta.vteximg.com.br/arquivos/ids/170415/MORRAL_MRC-2163_DARK-BROWN_0.jpg?v=637731885174270000"
-              data-name="MORRAL MRC 2163" data-price="450" data-pricelist="450" data-group="mrc_2163" data-sku-id="2986"
-              data-seller="1" data-sc="1" data-available="true" data-maincategory="/HOMBRE/MORRALES/">
-              <span class="color_element marron _marron active"></span>
-              <span class="color_name">marron</span>
-            </li>
-            <li class="list_color_element" data-color="negro" data-favorite="0"
-              data-link="https://www.renzocosta.com/morral-mrc-2163-black/p"
-              data-img="https://renzocosta.vteximg.com.br/arquivos/ids/170410/MORRAL_MRC-2163_BLACK_0.jpg?v=637731884330700000"
-              data-name="MORRAL MRC 2163" data-price="450" data-pricelist="450" data-group="mrc_2163" data-sku-id="2985"
-              data-seller="1" data-sc="1" data-available="true" data-maincategory="/HOMBRE/MORRALES/">
-              <span class="color_element negro _negro"></span>
-              <span class="color_name">negro</span>
-            </li>
-          </ul>
-          <a class="link" href="https://www.renzocosta.com/morral-mrc-2163-dark-brown/p">
-            <h5 class="card-title">MORRAL MRC 2163</h5>
-          </a>
-          <div class="price_discount_container">
-            <div class="prices">
-              <p class="actual">S/ 450.00</p>
+
+    <!-- Inicio filtro Producto-->
+    <div class="productos_catalogo">
+      <div class="productos">
+        <div class="producto_item">
+          <a class="link" href=""
+            ><img class="imagen_producto"
+              src="https://renzocosta.vteximg.com.br/arquivos/ids/170415/MORRAL_MRC-2163_DARK-BROWN_0.jpg?v=637731885174270000"
+              alt=""
+          /></a>
+          <div class="tarjeta_body">
+            <ul class="lista_color_container">
+              <li>
+                <span class="color_elemento active"></span>
+                <span class="color_nombre">marron</span>
+              </li>
+            </ul>
+            <a class="link" href="">
+              <h5 class="nombre_producto">MORRAL MRC 2163</h5>
+            </a>
+            <div class="precio_descuento">
+              <div class="precio_producto">
+                <p class="actual">S/ 450.00</p>
+              </div>
             </div>
+            <button class="agregar_carrito">
+              añadir a bolsa
+            </button>
           </div>
-          <button class="add_to_cart" data-color="marron" data-sku="2986" data-quantity="1" data-seller="1" data-sc="1">
-            añadir a bolsa
-          </button>
         </div>
-      </div>
-      <div class="card_item carousel_item card_mrc_2155">
-        <div class="label_new_hearth_container">
-          <i class="icons-renzo-costa icons-renzo-costa-hearth btn_add_favorite" data-sku-id="2984"></i>
-        </div>
-        <a class="link" href="https://www.renzocosta.com/morral-mrc-2155-dark-brown/p"><img class="card-img-top"
-            src="https://renzocosta.vteximg.com.br/arquivos/ids/170405/MORRAL_MRC-2155_DARK-BROWN_0.jpg?v=637731882255230000"
-            alt="" /></a>
-        <div class="card-body">
-          <ul class="list_color_container">
-            <li class="list_color_element" data-color="marron" data-favorite="0"
-              data-link="https://www.renzocosta.com/morral-mrc-2155-dark-brown/p"
-              data-img="https://renzocosta.vteximg.com.br/arquivos/ids/170405/MORRAL_MRC-2155_DARK-BROWN_0.jpg?v=637731882255230000"
-              data-name="MORRAL MRC 2155" data-price="450" data-pricelist="450" data-group="mrc_2155" data-sku-id="2984"
-              data-seller="1" data-sc="1" data-available="true" data-maincategory="/HOMBRE/MORRALES/">
-              <span class="color_element marron _marron active"></span>
-              <span class="color_name">marron</span>
-            </li>
-            <li class="list_color_element" data-color="negro" data-favorite="0"
-              data-link="https://www.renzocosta.com/morral-mrc-2155-black-/p"
-              data-img="https://renzocosta.vteximg.com.br/arquivos/ids/170400/MORRAL_MRC-2155_BLACK_0.jpg?v=637731881074400000"
-              data-name="MORRAL MRC 2155" data-price="450" data-pricelist="450" data-group="mrc_2155" data-sku-id="2983"
-              data-seller="1" data-sc="1" data-available="true" data-maincategory="/HOMBRE/MORRALES/">
-              <span class="color_element negro _negro"></span>
-              <span class="color_name">negro</span>
-            </li>
-          </ul>
-          <a class="link" href="https://www.renzocosta.com/morral-mrc-2155-dark-brown/p">
-            <h5 class="card-title">MORRAL MRC 2155</h5>
-          </a>
-          <div class="price_discount_container">
-            <div class="prices">
-              <p class="actual">S/ 450.00</p>
+        <div class="producto_item">
+          <a class="link" href=""
+            ><img class="imagen_producto"
+              src="https://renzocosta.vteximg.com.br/arquivos/ids/170415/MORRAL_MRC-2163_DARK-BROWN_0.jpg?v=637731885174270000"
+              alt=""
+          /></a>
+          <div class="tarjeta_body">
+            <ul class="lista_color_container">
+              <li>
+                <span class="color_elemento active"></span>
+                <span class="color_nombre">marron</span>
+              </li>
+            </ul>
+            <a class="link" href="">
+              <h5 class="nombre_producto">MORRAL MRC 2163</h5>
+            </a>
+            <div class="precio_descuento">
+              <div class="precio_producto">
+                <p class="actual">S/ 450.00</p>
+              </div>
             </div>
+            <button class="agregar_carrito">
+              añadir a bolsa
+            </button>
           </div>
-          <button class="add_to_cart" data-color="marron" data-sku="2984" data-quantity="1" data-seller="1" data-sc="1">
-            añadir a bolsa
-          </button>
+        </div>
+        <div class="producto_item">
+          <a class="link" href=""
+            ><img class="imagen_producto"
+              src="https://renzocosta.vteximg.com.br/arquivos/ids/170415/MORRAL_MRC-2163_DARK-BROWN_0.jpg?v=637731885174270000"
+              alt=""
+          /></a>
+          <div class="tarjeta_body">
+            <ul class="lista_color_container">
+              <li>
+                <span class="color_elemento active"></span>
+                <span class="color_nombre">marron</span>
+              </li>
+            </ul>
+            <a class="link" href="">
+              <h5 class="nombre_producto">MORRAL MRC 2163</h5>
+            </a>
+            <div class="precio_descuento">
+              <div class="precio_producto">
+                <p class="actual">S/ 450.00</p>
+              </div>
+            </div>
+            <button class="agregar_carrito">
+              añadir a bolsa
+            </button>
+          </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- Fin img-Carrusel-->
-  <!--Final Header-->
 </body>

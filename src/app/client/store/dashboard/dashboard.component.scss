@@ -32,6 +32,7 @@ header {
   align-items: center;
   z-index: 10;
 }
+
 //logo-menu
 .logo {
   margin-top: 15px;
@@ -122,36 +123,6 @@ header {
   display: block;
 }
 
-//resposive
-@media screen and(min-width:768px) {
-  .logo {
-    margin-left: 50px;
-  }
-  .nav__header {
-    height: 100px;
-  }
-  .bar-btn {
-    display: none;
-  }
-  .nav-menu {
-    position: relative;
-    height: 100px;
-    top: 0px;
-    background: none;
-    transition: none;
-    text-align: right;
-    margin-right: 50px;
-    & li {
-      display: inline-block;
-      line-height: 100px;
-      margin: 0 20px;
-      transition: none;
-    }
-    & a {
-      font-size: 12px;
-    }
-  }
-}
 //Fin nav
 nav {
   padding: 0px 20px;
@@ -299,7 +270,137 @@ nav {
   }
 
   //productos
-  .productos {
+  .productos_catalogo {
+    align-items: stretch;
+    display: flex;
+    position: relative;
+    width: 100%;
+
+    .productos {
+      display: inline-flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+
+      .producto_item {
+        flex: 1 1 auto;
+        max-width: 300px;
+        position: relative;
+        width: 100vh;
+        border: none;
+        cursor: pointer;
+        outline: 0;
+        & .producto_item a {
+          outline: 0;
+          text-decoration: none;
+        }
+
+        .imagen_producto {
+          border-top-left-radius: calc(0.25rem - 1px);
+          border-top-right-radius: calc(0.25rem - 1px);
+          width: 100%;
+        }
+
+        .tarjeta_body {
+          padding: 0.8125rem 0.8125rem 1.0625rem;
+
+          .lista_color_container {
+            list-style: none;
+            display: inline-block;
+            height: 1.25rem;
+            margin: 0 0.75rem 0 0;
+            position: relative;
+            width: 1.25rem;
+            background: #4e351f;
+            margin-bottom: 1rem;
+            border-radius: 50%;
+            padding: 0;
+
+            & .color_elemento {
+              background-repeat: no-repeat !important;
+              box-shadow: 0 0 0 0 #fff, 0 0 0 1px #b2b2b2;
+              display: block;
+              height: 1.125rem;
+              margin: 0 0.75rem 0 0;
+              overflow: hidden;
+              position: relative;
+              width: 1.125rem;
+            }
+
+            .color_elemento.active {
+              border-radius: 50%;
+              box-shadow: 0 0 0 3px #fff, 0 0 0 4px #b2b2b2;
+            }
+          }
+          .nombre_producto {
+            color: #202020;
+            font-size: 0.6875rem;
+            line-height: 1;
+          }
+          .precio_descuento {
+            display: flex;
+            flex-direction: row;
+          }
+          .agregar_carrito {
+            background-color: #000;
+            border: 0;
+            border-radius: 3px;
+            color: #fff;
+            cursor: pointer;
+            display: block;
+            font-size: 0.875rem;
+            height: 3.25rem;
+            text-transform: uppercase;
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+
+}
+
+ //resposive
+@media screen and(min-width:768px) {
+  .logo {
+    margin-left: 50px;
+  }
+  .nav__header {
+    height: 100px;
+  }
+  .bar-btn {
     display: none;
+  }
+  .nav-menu {
+    position: relative;
+    height: 100px;
+    top: 0px;
+    background: none;
+    transition: none;
+    text-align: right;
+    margin-right: 50px;
+    & li {
+      display: inline-block;
+      line-height: 100px;
+      margin: 0 20px;
+      transition: none;
+    }
+    & a {
+      font-size: 12px;
+    }
+  }
+  .productos_catalogo {
+    padding: 0 5rem;
+  }
+  .productos {
+    gap: 2rem;
+    min-width: 62rem;
+    position: relative;
+    width: 100%;
+  }
+  .agregar_carrito {
+    opacity: 0;
+  }
+  .precio_producto {
+    width: 100%;
   }
 }
